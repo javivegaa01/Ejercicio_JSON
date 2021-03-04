@@ -35,6 +35,10 @@ while True:
             print(" ",elem1,elem2.rjust((max(lista)+6)-len(elem1)," "))
         print("----------------------------------------------------------------")
         print()
-
+    elif opcion==2:
+        print()
+        print("El número de peliculas existentes es: %s" % Contar_Informacion(datos))
+        print()
+        
             
             
