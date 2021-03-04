@@ -60,7 +60,9 @@ while True:
         for elem in Buscar_Informacion_Relacionada(a,datos):
             print("--> ",elem)
         print()
-    #elif opcion==5:
+    elif opcion==5:
+        d=input("Director: ")
+        print(Ejercicio_Libre(d,datos))
 
             
             
