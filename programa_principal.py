@@ -39,6 +39,7 @@ while True:
         print()
         print("El número de peliculas existentes es: %s" % Contar_Informacion(datos))
         print()
-        
+    elif opcion==3:
+
             
             
