@@ -1,5 +1,7 @@
 def Listar_Informacion(doc):
-    lista=[]
+    titulos=[]
+    anyos=[]
     for pelicula in doc["peliculas"]:
-        lista.append(pelicula["titulo"]+" "+pelicula["anno"])
-    return lista
+        titulos.append(pelicula["titulo"])
+        anyos.append(str(pelicula["anno"]))
+    return titulos,anyos
