@@ -51,6 +51,14 @@ while True:
         for elem in Buscar_Informacion(p,datos)[1]:
             print(elem)
         print()
-
+    elif opcion==4:
+        print()
+        a=input("Actor: ")
+        print()
+        print("%s ha participado en las siguientes peliculas:" % a)
+        print()
+        for elem in Buscar_Informacion_Relacionada(a,datos):
+            print("--> ",elem)
+        print()
             
             

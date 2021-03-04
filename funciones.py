@@ -18,3 +18,12 @@ def Buscar_Informacion(pelicula,doc):
             categoria=info["categoria"]
             director=info["director"]
     return categoria,director
+
+def Buscar_Informacion_Relacionada(actor,doc):
+    lista_peliculas=[]
+    for info in doc["peliculas"]:
+        for actores in info["actores"]:
+            if actor==actores["nombre"]:
+                lista_peliculas.append(info["titulo"])
+    return lista_peliculas
+
