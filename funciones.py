@@ -13,4 +13,8 @@ def Contar_Informacion(doc):
     return len(titulos)
 
 def Buscar_Informacion(pelicula,doc):
-    for 
+    for info in doc["peliculas"]:
+        if info["titulo"]==pelicula:
+            categoria=info["categoria"]
+            director=info["director"]
+    return categoria,director

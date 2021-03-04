@@ -40,6 +40,17 @@ while True:
         print("El número de peliculas existentes es: %s" % Contar_Informacion(datos))
         print()
     elif opcion==3:
+        print()
+        p=input("Pelicula: ")
+        print()
+        print("---CATEGORIAS---")
+        for elem in Buscar_Informacion(p,datos)[0]:
+            print(elem)
+        print()
+        print("---DIRECTOR---")
+        for elem in Buscar_Informacion(p,datos)[1]:
+            print(elem)
+        print()
 
             
             
