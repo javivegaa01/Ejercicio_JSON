@@ -27,3 +27,6 @@ def Buscar_Informacion_Relacionada(actor,doc):
                 lista_peliculas.append(info["titulo"])
     return lista_peliculas
 
+#def Ejercicio_Libre():
+    #return
+

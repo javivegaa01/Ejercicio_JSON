@@ -60,5 +60,7 @@ while True:
         for elem in Buscar_Informacion_Relacionada(a,datos):
             print("--> ",elem)
         print()
+    #elif opcion==5:
+
             
             
