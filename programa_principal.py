@@ -1,7 +1,8 @@
 import json
+from funciones import *
+from tabulate import tabulate
 with open("peliculas.json") as fichero:
     datos=json.load(fichero)
-from funciones import *
 
 print("Bienvenido al programa")
 print()
