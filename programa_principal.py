@@ -63,9 +63,13 @@ while True:
         print()
     elif opcion==5:
         d=input("Director: ")
+        print()
+        print("%s ha participado en %i peliculas: " %(d,len(Ejercicio_Libre(d,datos))))
+        print()
         for a in range(len(Ejercicio_Libre(d,datos))):
             for elem in Ejercicio_Libre(d,datos)[a].items():
                 print(elem[0],":",elem[1])
+            print()
                 
 
 
