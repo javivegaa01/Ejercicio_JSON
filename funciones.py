@@ -40,3 +40,12 @@ def Ejercicio_Libre(director,doc):
                 pelicula.append(dic)    
     return pelicula
 
+#Funciones de validacion.
+def validacion_de_pelicula(pelicula,doc):
+    titulos=[]
+    for info in doc["peliculas"]:
+        titulos.append(info["titulo"])
+    ind=False
+    if pelicula in titulos:
+        ind=True
+    return ind

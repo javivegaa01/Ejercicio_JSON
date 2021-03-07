@@ -46,14 +46,17 @@ while True:
         os.system("clear")
         print()
         p=input("Pelicula: ")
-        print()
-        print("---CATEGORIAS---")
-        for elem in Buscar_Informacion(p,datos)[0]:
-            print(elem)
-        print()
-        print("---DIRECTOR---")
-        for elem in Buscar_Informacion(p,datos)[1]:
-            print(elem)
+        if validacion_de_pelicula(p,datos)==False:
+            print("Tu búsqueda no ha obtenido ningún resultado")
+        else:
+            print()
+            print("---CATEGORIAS---")
+            for elem in Buscar_Informacion(p,datos)[0]:
+                print(elem)
+            print()
+            print("---DIRECTOR---")
+            for elem in Buscar_Informacion(p,datos)[1]:
+                print(elem)
         print()
     elif opcion==4:
         os.system("clear")
