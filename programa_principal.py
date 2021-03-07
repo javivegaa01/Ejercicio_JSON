@@ -74,13 +74,19 @@ while True:
     elif opcion==5:
         os.system("clear")
         d=input("Director: ")
-        print()
-        print("%s ha participado en %i peliculas: " %(d,len(Ejercicio_Libre(d,datos))))
-        print()
-        for a in range(len(Ejercicio_Libre(d,datos))):
-            for elem in Ejercicio_Libre(d,datos)[a].items():
-                print(elem[0],":",elem[1])
+        if validacion_de_director(d,datos)==False:
+            print("Tu búsqueda no ha obtenido ningún resultado")
+        else:
             print()
+            print("%s ha participado en %i peliculas: " %(d,len(Ejercicio_Libre(d,datos))))
+            print()
+            for a in range(len(Ejercicio_Libre(d,datos))):
+                for elem in Ejercicio_Libre(d,datos)[a].items():
+                    print(elem[0],":",elem[1])
+                print()
+
+print()
+print("Fin del programa")
 
         
 

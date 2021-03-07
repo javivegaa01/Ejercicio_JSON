@@ -56,3 +56,11 @@ def validacion_de_actor(actor,doc):
                 ind=True
     return ind
 
+def validacion_de_director(director,doc):
+    ind=False
+    for info in doc["peliculas"]:
+        for directores in info["director"]:
+            if director==directores:
+                ind=True
+    return ind
+
