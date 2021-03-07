@@ -63,7 +63,10 @@ while True:
         print()
     elif opcion==5:
         d=input("Director: ")
-        print(Ejercicio_Libre(d,datos))
+        for a in range(len(Ejercicio_Libre(d,datos))):
+            for elem in Ejercicio_Libre(d,datos)[a].items():
+                print(elem[0],":",elem[1])
+                
 
-            
-            
+
+        

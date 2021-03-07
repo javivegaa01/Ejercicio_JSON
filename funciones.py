@@ -29,15 +29,14 @@ def Buscar_Informacion_Relacionada(actor,doc):
 
 def Ejercicio_Libre(director,doc):
     pelicula=[]
-    for a in range(len(doc["peliculas"])):
-        for info in doc["peliculas"][a]:
-            for directores in info["director"]:
-                if director==directores:
-                    dic={}
-                    dic["Titulo"]=info["titulo"]
-                    dic["Trama"]=info["desc"]
-                    dic["Año"]=info["anno"]
-                    dic["Precio"]=info["precio"]
-                    pelicula.append(dic)         
+    for info in doc["peliculas"]:
+        for directores in info["director"]:
+            if director==directores:
+                dic={}
+                dic["Titulo"]=info["titulo"]
+                dic["Trama"]=info["desc"]
+                dic["Estreno"]=info["anno"]
+                dic["Precio"]=info["precio"]
+                pelicula.append(dic)    
     return pelicula
 
