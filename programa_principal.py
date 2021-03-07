@@ -1,6 +1,6 @@
 import json
 from funciones import *
-from tabulate import tabulate
+import os
 with open("peliculas.json") as fichero:
     datos=json.load(fichero)
 
@@ -24,6 +24,7 @@ while True:
     if opcion==6:
         break
     elif opcion==1:
+        os.system("clear")
         tit,anyo=Listar_Informacion(datos)
         lista=[]
         for elem in Listar_Informacion(datos)[0]:
@@ -37,10 +38,12 @@ while True:
         print("----------------------------------------------------------------")
         print()
     elif opcion==2:
+        os.system("clear")
         print()
         print("El número de peliculas existentes es: %s" % Contar_Informacion(datos))
         print()
     elif opcion==3:
+        os.system("clear")
         print()
         p=input("Pelicula: ")
         print()
@@ -53,6 +56,7 @@ while True:
             print(elem)
         print()
     elif opcion==4:
+        os.system("clear")
         print()
         a=input("Actor: ")
         print()
@@ -62,6 +66,7 @@ while True:
             print("--> ",elem)
         print()
     elif opcion==5:
+        os.system("clear")
         d=input("Director: ")
         print()
         print("%s ha participado en %i peliculas: " %(d,len(Ejercicio_Libre(d,datos))))
