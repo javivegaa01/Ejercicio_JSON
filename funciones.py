@@ -42,10 +42,17 @@ def Ejercicio_Libre(director,doc):
 
 #Funciones de validacion.
 def validacion_de_pelicula(pelicula,doc):
-    titulos=[]
-    for info in doc["peliculas"]:
-        titulos.append(info["titulo"])
     ind=False
-    if pelicula in titulos:
-        ind=True
+    for info in doc["peliculas"]:
+        if pelicula==info["titulo"]:
+            ind=True
     return ind
+
+def validacion_de_actor(actor,doc):
+    ind=False
+    for info in doc["peliculas"]:
+        for actores in info["actores"]:
+            if actor==actores["nombre"]:
+                ind=True
+    return ind
+

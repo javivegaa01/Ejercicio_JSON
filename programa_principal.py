@@ -62,11 +62,14 @@ while True:
         os.system("clear")
         print()
         a=input("Actor: ")
-        print()
-        print("%s ha participado en las siguientes peliculas:" % a)
-        print()
-        for elem in Buscar_Informacion_Relacionada(a,datos):
-            print("--> ",elem)
+        if validacion_de_actor(a,datos)==False:
+            print("Tu búsqueda no ha obtenido ningún resultado")
+        else:
+            print()
+            print("%s ha participado en las siguientes peliculas:" % a)
+            print()
+            for elem in Buscar_Informacion_Relacionada(a,datos):
+                print("--> ",elem)
         print()
     elif opcion==5:
         os.system("clear")
@@ -78,7 +81,8 @@ while True:
             for elem in Ejercicio_Libre(d,datos)[a].items():
                 print(elem[0],":",elem[1])
             print()
-                
+
+        
 
 
         
